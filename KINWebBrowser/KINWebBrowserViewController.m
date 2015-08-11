@@ -47,8 +47,6 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 @property (nonatomic, strong) NSURL *uiWebViewCurrentURL;
 @property (nonatomic, strong) NSURL *URLToLaunchWithPermission;
 @property (nonatomic, strong) UIAlertView *externalAppPermissionAlertView;
-@property (nonatomic, strong) BOOL isToolbarHidden;
-@property (nonatomic, strong) BOOL isNavbarHidden;
 
 @optional
 @end
