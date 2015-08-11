@@ -48,9 +48,6 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 @property (nonatomic, strong) NSURL *URLToLaunchWithPermission;
 @property (nonatomic, strong) UIAlertView *externalAppPermissionAlertView;
 
-@optional
-@end
-
 @end
 
 @implementation KINWebBrowserViewController
