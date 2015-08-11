@@ -78,6 +78,9 @@
 @property (nonatomic, strong) WKWebView *wkWebView;
 @property (nonatomic, strong) UIWebView *uiWebView;
 
+@property (nonatomic) BOOL isToolbarHidden;
+@property (nonatomic) BOOL isNavbarHidden;
+
 - (id)initWithConfiguration:(WKWebViewConfiguration *)configuration NS_AVAILABLE_IOS(8_0);
 
 #pragma mark - Static Initializers

@@ -47,6 +47,11 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 @property (nonatomic, strong) NSURL *uiWebViewCurrentURL;
 @property (nonatomic, strong) NSURL *URLToLaunchWithPermission;
 @property (nonatomic, strong) UIAlertView *externalAppPermissionAlertView;
+@property (nonatomic, strong) BOOL isToolbarHidden;
+@property (nonatomic, strong) BOOL isNavbarHidden;
+
+@optional
+@end
 
 @end
 
@@ -153,8 +158,8 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-    [self.navigationController setToolbarHidden:NO animated:YES];
+    [self.navigationController setNavigationBarHidden:self.isNavbarHidden animated:animated];
+    [self.navigationController setToolbarHidden:self.isToolbarHidden animated:animated];
     
     [self.navigationController.navigationBar addSubview:self.progressView];
     
