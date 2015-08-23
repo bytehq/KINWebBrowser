@@ -548,6 +548,8 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 }
 
 - (void)launchExternalAppWithURL:(NSURL *)URL {
+    NSLog(@"%@", URL);
+
     if ([[URL.scheme lowercaseString] isEqualToString:@"byte"] || [[URL.scheme lowercaseString] isEqualToString:@"itms"] || [[URL.scheme lowercaseString] isEqualToString:@"itms-apps"]) {
         [[UIApplication sharedApplication] openURL:URL];
         return;
