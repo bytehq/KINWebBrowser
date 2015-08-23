@@ -548,6 +548,11 @@ static void *KINWebBrowserContext = &KINWebBrowserContext;
 }
 
 - (void)launchExternalAppWithURL:(NSURL *)URL {
+    if ([[url.scheme lowercaseString] isEqualToString:@"byte"] || [[url.scheme lowercaseString] isEqualToString:@"itms"]) {
+        [[UIApplication sharedApplication] openURL:URL];
+        return;
+    }
+
     self.URLToLaunchWithPermission = URL;
     [self.externalAppPermissionAlertView show];
 }
